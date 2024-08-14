@@ -18,7 +18,7 @@ export default function Player() {
           ref={playerName}
           type="text"
         />
-        <button onClick={handleClick}>Set Name</button>
+        <button onClick={handleClick}>Sett Name</button>
       </p>
     </section>
   );
