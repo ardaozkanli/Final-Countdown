@@ -1,10 +1,11 @@
 import React from "react";
 import { forwardRef } from "react";
+import { createPortal } from "react-dom";
 const ResultModal = forwardRef(function ResultModal(
   { result, targetTime },
   ref
 ) {
-  return (
+  return createPortal(
     <dialog ref={ref} className="result-modal">
       <h2>You {result}</h2>
       <p>
@@ -16,7 +17,8 @@ const ResultModal = forwardRef(function ResultModal(
       <form method="dialog">
         <button>Close</button>
       </form>
-    </dialog>
+    </dialog>,
+    document.getElementById("modal")
   );
 });
 
